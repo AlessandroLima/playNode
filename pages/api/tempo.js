@@ -7,10 +7,14 @@ async function tempo(request, response) {
     const weatherResponseJson = await weatherResponse.json();
     const temperature = weatherResponseJson.main.temp;
     const city = weatherResponseJson.name;
+    const temp = new Date();
+    
+    response.setHeader('Cache-Control', 's-maxage=10', 'stale-while-revalidate');
     response.json(
         {
             temperature: temperature,
-            city: city
+            city: city,
+            hour: temp
         }
     );
 }
