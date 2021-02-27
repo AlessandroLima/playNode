@@ -16,22 +16,22 @@ async function tempo(request, response) {
         }
     );
 
-    return {
-        results: {
-            weatherResponseJson,
-        },
-      }
+    // return {
+    //     results: {
+    //         weatherResponseJson,
+    //     },
+    //   }
 }
 
-function RenderPageTempo({ weatherResponseJson }) {
-    return (
-      <ul>
-        {weatherResponseJson.map((result) => (
-          <li> A temperatura em {result.city} é {result.temperature} graus!</li>
-        ))}
-      </ul>
-    )
-  }
+// function RenderPageTempo({ weatherResponseJson }) {
+//     return (
+//       <ul>
+//         {weatherResponseJson.map((result) => (
+//           <li> A temperatura em {result.city} é {result.temperature} graus!</li>
+//         ))}
+//       </ul>
+//     )
+//   }
   
  // export default RenderPageTempo;
 
