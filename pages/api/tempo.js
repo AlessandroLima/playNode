@@ -12,7 +12,7 @@ async function tempo(request, response) {
     //const temp = new Date();
     
     response.setHeader('Cache-Control', 's-maxage=10', 'stale-while-revalidate');
-    result = response.json(
+    response.json(
         {
             temperature: temperature,
             city: city,
