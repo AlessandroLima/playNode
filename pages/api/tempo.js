@@ -8,13 +8,13 @@ async function tempo(request, response) {
     const temp = new Date();
     
     response.setHeader('Cache-Control', 's-maxage=10', 'stale-while-revalidate');
-    response.json(
-        {
-            temperature: temperature,
-            city: city,
-            hour: temp
-        }
-    );
+    // response.json(
+    //     {
+    //         temperature: temperature,
+    //         city: city,
+    //         hour: temp
+    //     }
+    // );
 
     return {
         results: {
