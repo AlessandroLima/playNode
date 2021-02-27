@@ -33,8 +33,8 @@ function RenderPageTempo({ weatherResponseJson }) {
     )
   }
   
-  export default RenderPageTempo;
+ // export default RenderPageTempo;
 
 
 
-//export default tempo;
+export default tempo;
