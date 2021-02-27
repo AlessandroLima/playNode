@@ -1,5 +1,3 @@
-//
-
 async function tempo(request, response) {
     
     const apiKey = process.env.API_KEY;
@@ -17,6 +15,14 @@ async function tempo(request, response) {
             hour: temp
         }
     );
+
+    return {
+        result: {
+            weatherResponseJson,
+        },
+      }
 }
+
+
 
 export default tempo;
