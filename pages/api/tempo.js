@@ -23,18 +23,19 @@ async function tempo(request, response) {
       }
 }
 
-function RenderPageTempo({ weatherResponseJson }) {
+function RenderPageTempo() {
     return (
       <ul>
-        {weatherResponseJson.map((result) => (
+        OlÁ  
+        {/* {weatherResponseJson.map((result) => (
           <li> A temperatura em {result.city} é {result.temperature} graus!</li>
-        ))}
+        ))} */}
       </ul>
     )
   }
   
- // export default RenderPageTempo;
+  export default RenderPageTempo;
 
 
 
-export default tempo;
+//export default tempo;
