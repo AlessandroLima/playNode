@@ -1,5 +1,7 @@
 //
 
+const result;
+
 async function tempo(request, response) {
     
     const apiKey = process.env.API_KEY;
@@ -7,16 +9,18 @@ async function tempo(request, response) {
     const weatherResponseJson = await weatherResponse.json();
     const temperature = weatherResponseJson.main.temp;
     const city = weatherResponseJson.name;
-    const temp = new Date();
+    //const temp = new Date();
     
     response.setHeader('Cache-Control', 's-maxage=10', 'stale-while-revalidate');
-    response.json(
+    result = response.json(
         {
             temperature: temperature,
             city: city,
             hour: temp
         }
+        
     );
+    
 }
 
 export default tempo;
