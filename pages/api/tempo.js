@@ -15,6 +15,12 @@ async function tempo(request, response) {
             hour: temp
         }
     );
+
+    return {
+        response: {
+            weatherResponseJson,
+        },
+      }
     
 }
 
